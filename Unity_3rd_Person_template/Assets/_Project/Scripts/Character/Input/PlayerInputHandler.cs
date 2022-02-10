@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace GG_Development
-{
     public class PlayerInputHandler : MonoBehaviour
     {
         public Vector2 RawMovementInput { get; private set; }
         public Vector2 RawLookInput { get; private set; }
-        public int NormalizeInputX { get; private set; }
-        public int NormalizeInputY { get; private set; }
+        public int RawInputX { get; private set; }
+        public int RawInputY { get; private set; }
 
         public bool JumpInput { get; private set; }
         public bool JumpInputStop { get; private set; }
@@ -28,8 +24,8 @@ namespace GG_Development
         {
             RawMovementInput = p_context.ReadValue<Vector2>();
 
-            NormalizeInputX = Mathf.RoundToInt(RawMovementInput.x);
-            NormalizeInputY = Mathf.RoundToInt(RawMovementInput.y);
+            RawInputX = Mathf.RoundToInt(RawMovementInput.x);
+            RawInputY = Mathf.RoundToInt(RawMovementInput.y);
 
         }
         public void OnLookInput(InputAction.CallbackContext p_context)
@@ -62,4 +58,4 @@ namespace GG_Development
         }
         #endregion
     }
-}
+

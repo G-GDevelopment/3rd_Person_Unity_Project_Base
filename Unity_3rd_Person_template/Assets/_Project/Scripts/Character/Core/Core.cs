@@ -1,18 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Core : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Movement Movement { get; private set; }
+    public CollisionSystem CollisionSystem { get; private set; }
+    public AbilitySystem AbilitySystem { get; private set; }
+    public Animator Animator { get; private set; }
+
+    private void Awake()
     {
-        
+        Movement = GetComponentInChildren<Movement>();
+        CollisionSystem = GetComponentInChildren<CollisionSystem>();
+        AbilitySystem = GetComponentInChildren<AbilitySystem>();
+
+        Animator = GetComponentInParent<Animator>();
+
+        if(!Movement || !CollisionSystem || !AbilitySystem)
+        {
+            Debug.LogError("Missing Core Components");
+        }
+
+        if (!Animator)
+        {
+            Debug.LogError("Missing Animator Component");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartMethod()
     {
-        
+
+    }
+
+    public void LogicUpdate()
+    {
+
     }
 }
