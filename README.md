@@ -3,9 +3,6 @@ This is the template that we are going to use for the Ratchet & Clank breakdown.
 
 You can watch the breakdown on my YouTube channel [GG Development](https://www.youtube.com/channel/UC3xfx1Y2UIKsSCtEcRPKM6g)
 
-##Game Mechanics breakdown:
-- Magneboots
-
 ### Language
 C#
 
