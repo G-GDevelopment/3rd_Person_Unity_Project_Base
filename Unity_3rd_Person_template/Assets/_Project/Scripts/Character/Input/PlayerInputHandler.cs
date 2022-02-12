@@ -5,8 +5,8 @@ using UnityEngine.InputSystem;
     {
         public Vector2 RawMovementInput { get; private set; }
         public Vector2 RawLookInput { get; private set; }
-        public int RawInputX { get; private set; }
-        public int RawInputY { get; private set; }
+        public float RawInputX { get; private set; }
+        public float RawInputY { get; private set; }
 
         public bool JumpInput { get; private set; }
         public bool JumpInputStop { get; private set; }
